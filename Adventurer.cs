@@ -9,19 +9,28 @@ namespace Quest
         // The only place the Name can be set is in the Adventurer constructor
         // Note: the constructor is defined below.
         public string Name { get; }
-
+        
         // This is a mutable property it has a "get" and a "set"
         //  So it can be read and changed by any code in the application
         public int Awesomeness { get; set; }
+        public Robe ColorfulRobe {get; set;}
+    
 
+       public string GetDiscription()
+       {
+        return $@"The Mighty Adventurer, {Name}, brandishes a robe that is {ColorfulRobe.Length} in length, and is made with {ColorfulRobe.Colors} colors!";
+       }
+        
+        
         // A constructor to make a new Adventurer object with a given name
-        public Adventurer()
+        public Adventurer(Robe Robe)
         {
+            ColorfulRobe = Robe;
             Console.WriteLine("Enter your name");
             Name = Console.ReadLine();
             Awesomeness = 50;
         }
-
+            
 
         // This method returns a string that describes the Adventurer's status
         // Note one way to describe what this method does is:
