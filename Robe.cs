@@ -3,13 +3,11 @@ using System.Collections.Generic;
 
 namespace Quest
 {
+
     public class Robe
     {
-        List<string> Colors = new List<string>(); 
-        int Length {get; set;}
-
-        
+        public List<string> Colors = new List<string>(); 
+        public int Length {get; set;}
     }
-
-
+    
 }
